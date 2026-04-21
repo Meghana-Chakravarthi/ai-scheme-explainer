@@ -1,0 +1,397 @@
+[
+  {
+    "scheme_name": "PM Kisan Samman Nidhi",
+    "description": "Income support scheme providing financial assistance to small and marginal farmers across India.",
+    "benefits": "₹6000 per year in three equal installments of ₹2000 each directly transferred to bank accounts.",
+    "eligibility": {
+      "age": "18-100 years",
+      "income": "Landholding farmers",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "Farmer"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Land Ownership Documents"
+    ],
+    "source_url": "https://pmkisan.gov.in"
+  },
+  {
+    "scheme_name": "Ayushman Bharat - Pradhan Mantri Jan Arogya Yojana",
+    "description": "National health protection scheme providing health insurance coverage to economically vulnerable families.",
+    "benefits": "Health coverage of ₹5 lakh per family per year for secondary and tertiary hospitalization.",
+    "eligibility": {
+      "age": "All ages",
+      "income": "Below ₹3 lakh annual income",
+      "gender": "All",
+      "category": "BPL",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Ration Card",
+      "Income Certificate"
+    ],
+    "source_url": "https://pmjay.gov.in"
+  },
+  {
+    "scheme_name": "Pradhan Mantri Awas Yojana - Urban",
+    "description": "Housing for All mission providing affordable housing to urban poor and economically weaker sections.",
+    "benefits": "Interest subsidy on home loans, direct financial assistance for house construction.",
+    "eligibility": {
+      "age": "18-70 years",
+      "income": "EWS: Up to ₹3 lakh, LIG: ₹3-6 lakh, MIG: ₹6-18 lakh",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Bank Account",
+      "Property Documents"
+    ],
+    "source_url": "https://pmaymis.gov.in"
+  },
+  {
+    "scheme_name": "National Scholarship Portal - Pre-Matric Scholarship",
+    "description": "Financial assistance to students from economically weaker sections for pursuing education.",
+    "benefits": "Scholarship amount varies from ₹3000 to ₹12000 per year based on class and category.",
+    "eligibility": {
+      "age": "10-18 years",
+      "income": "Below ₹2.5 lakh annual family income",
+      "gender": "All",
+      "category": "SC/ST/OBC/Minority",
+      "state": "All India",
+      "occupation": "Student"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Caste Certificate",
+      "Bank Account",
+      "School ID"
+    ],
+    "source_url": "https://scholarships.gov.in"
+  },
+  {
+    "scheme_name": "Sukanya Samriddhi Yojana",
+    "description": "Small deposit savings scheme for girl child to secure their future education and marriage expenses.",
+    "benefits": "High interest rate (currently 8.2), tax benefits under Section 80C, maturity after 21 years.",
+    "eligibility": {
+      "age": "0-10 years (girl child)",
+      "income": "No income limit",
+      "gender": "Female",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Birth Certificate of Girl Child",
+      "Parents Aadhaar",
+      "Address Proof",
+      "Passport Photo"
+    ],
+    "source_url": "https://www.nsiindia.gov.in"
+  },
+  {
+    "scheme_name": "PM Ujjwala Yojana",
+    "description": "Scheme to provide free LPG connections to women from Below Poverty Line households.",
+    "benefits": "Free LPG connection, financial assistance for first refill and stove.",
+    "eligibility": {
+      "age": "18-100 years",
+      "income": "BPL families",
+      "gender": "Female",
+      "category": "BPL",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "BPL Card",
+      "Aadhaar Card",
+      "Bank Account",
+      "Address Proof",
+      "Passport Photo"
+    ],
+    "source_url": "https://pmuy.gov.in"
+  },
+  {
+    "scheme_name": "Stand Up India Scheme",
+    "description": "Facilitates bank loans for SC/ST and women entrepreneurs for setting up greenfield enterprises.",
+    "benefits": "Bank loans between ₹10 lakh to ₹1 crore for non-farm sector enterprises.",
+    "eligibility": {
+      "age": "18-65 years",
+      "income": "No specific limit",
+      "gender": "Women or SC/ST",
+      "category": "SC/ST or Women",
+      "state": "All India",
+      "occupation": "Entrepreneur"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "PAN Card",
+      "Business Plan",
+      "Caste Certificate (if applicable)",
+      "Bank Account"
+    ],
+    "source_url": "https://www.standupmitra.in"
+  },
+  {
+    "scheme_name": "e-Shram Portal Registration",
+    "description": "National database of unorganized workers to provide social security and welfare benefits.",
+    "benefits": "₹2 lakh accident insurance, access to various welfare schemes, pension schemes.",
+    "eligibility": {
+      "age": "16-59 years",
+      "income": "Monthly income below ₹15000",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "Worker"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account with IFSC",
+      "Mobile Number"
+    ],
+    "source_url": "https://eshram.gov.in"
+  },
+  {
+    "scheme_name": "PM Shram Yogi Maandhan Pension Scheme",
+    "description": "Voluntary pension scheme for unorganized sector workers ensuring old age protection.",
+    "benefits": "Guaranteed monthly pension of ₹3000 after attaining age of 60 years.",
+    "eligibility": {
+      "age": "18-40 years",
+      "income": "Monthly income below ₹15000",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "Worker"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account with IFSC",
+      "Savings Bank Passbook"
+    ],
+    "source_url": "https://maandhan.in"
+  },
+  {
+    "scheme_name": "AICTE Pragati Scholarship for Girls",
+    "description": "Scholarship scheme to encourage girl students to pursue technical education in AICTE approved institutions.",
+    "benefits": "₹50,000 per year (₹30,000 tuition fee  ₹20,000 incidental charges).",
+    "eligibility": {
+      "age": "17-25 years",
+      "income": "Family income below ₹8 lakh per annum",
+      "gender": "Female",
+      "category": "General",
+      "state": "All India",
+      "occupation": "Student"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Admission Proof",
+      "Bank Account",
+      "Passport Photo"
+    ],
+    "source_url": "https://www.aicte-india.org"
+  },
+  {
+    "scheme_name": "Pradhan Mantri Mudra Yojana",
+    "description": "Provides loans to micro and small business enterprises and individuals for income generating activities.",
+    "benefits": "Loans up to ₹10 lakh under three categories: Shishu (up to ₹50k), Kishore (₹50k-₹5L), Tarun (₹5L-₹10L).",
+    "eligibility": {
+      "age": "18-65 years",
+      "income": "No specific limit",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "Entrepreneur"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "PAN Card",
+      "Business Plan",
+      "Address Proof",
+      "Bank Statements"
+    ],
+    "source_url": "https://www.mudra.org.in"
+  },
+  {
+    "scheme_name": "Pradhan Mantri Fasal Bima Yojana",
+    "description": "Crop insurance scheme providing financial support to farmers in case of crop failure due to natural calamities.",
+    "benefits": "Insurance coverage for crop loss, premium subsidy by government.",
+    "eligibility": {
+      "age": "18-100 years",
+      "income": "All farmers",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "Farmer"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Land Records",
+      "Bank Account",
+      "Sowing Certificate"
+    ],
+    "source_url": "https://pmfby.gov.in"
+  },
+  {
+    "scheme_name": "Pradhan Mantri Matru Vandana Yojana",
+    "description": "Maternity benefit scheme providing cash incentive to pregnant and lactating mothers for first live birth.",
+    "benefits": "Cash benefit of ₹5000 in three installments for improved health and nutrition.",
+    "eligibility": {
+      "age": "19-45 years",
+      "income": "All income groups",
+      "gender": "Female",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account",
+      "MCP Card",
+      "Institutional Delivery Proof"
+    ],
+    "source_url": "https://pmmvy.wcd.gov.in"
+  },
+  {
+    "scheme_name": "Atal Pension Yojana",
+    "description": "Pension scheme for unorganized sector workers providing guaranteed pension based on contribution.",
+    "benefits": "Guaranteed pension of ₹1000 to ₹5000 per month after 60 years based on contribution.",
+    "eligibility": {
+      "age": "18-40 years",
+      "income": "All income groups",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account",
+      "Mobile Number"
+    ],
+    "source_url": "https://npscra.nsdl.co.in/atal-pension-yojana.php"
+  },
+  {
+    "scheme_name": "Pradhan Mantri Kaushal Vikas Yojana",
+    "description": "Skill development scheme to enable youth to take up industry-relevant skill training.",
+    "benefits": "Free skill training, certification, and monetary rewards on successful completion.",
+    "eligibility": {
+      "age": "15-45 years",
+      "income": "All income groups",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account",
+      "Educational Certificates"
+    ],
+    "source_url": "https://www.pmkvyofficial.org"
+  },
+  {
+    "scheme_name": "National Rural Employment Guarantee Scheme (MGNREGA)",
+    "description": "Employment guarantee scheme providing at least 100 days of wage employment to rural households.",
+    "benefits": "Guaranteed 100 days of employment per year with minimum wages.",
+    "eligibility": {
+      "age": "18-100 years",
+      "income": "Rural households",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "Worker"
+    },
+    "documents_required": [
+      "Job Card",
+      "Aadhaar Card",
+      "Bank Account"
+    ],
+    "source_url": "https://nrega.nic.in"
+  },
+  {
+    "scheme_name": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+    "description": "Life insurance scheme offering renewable one-year life cover to people aged 18-50 years.",
+    "benefits": "Life cover of ₹2 lakh at premium of ₹436 per year.",
+    "eligibility": {
+      "age": "18-50 years",
+      "income": "All income groups",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account",
+      "Consent Form"
+    ],
+    "source_url": "https://www.jansuraksha.gov.in"
+  },
+  {
+    "scheme_name": "Pradhan Mantri Suraksha Bima Yojana",
+    "description": "Accident insurance scheme offering accidental death and disability cover.",
+    "benefits": "Accidental death cover of ₹2 lakh and disability cover at premium of ₹20 per year.",
+    "eligibility": {
+      "age": "18-70 years",
+      "income": "All income groups",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account",
+      "Consent Form"
+    ],
+    "source_url": "https://www.jansuraksha.gov.in"
+  },
+  {
+    "scheme_name": "Beti Bachao Beti Padhao",
+    "description": "Scheme to address declining Child Sex Ratio and promote education and welfare of girl child.",
+    "benefits": "Awareness campaigns, educational support, and financial incentives for girl child education.",
+    "eligibility": {
+      "age": "0-21 years (girl child)",
+      "income": "All income groups",
+      "gender": "Female",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Birth Certificate",
+      "Aadhaar Card",
+      "School Enrollment Proof"
+    ],
+    "source_url": "https://wcd.nic.in/bbbp-schemes"
+  },
+  {
+    "scheme_name": "Swachh Bharat Mission - Toilet Construction",
+    "description": "Scheme to construct individual household toilets in rural and urban areas.",
+    "benefits": "Financial assistance of ₹12,000 for toilet construction.",
+    "eligibility": {
+      "age": "18-100 years",
+      "income": "BPL and APL households without toilet",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account",
+      "Address Proof",
+      "Photo"
+    ],
+    "source_url": "https://swachhbharatmission.gov.in"
+  }
+]

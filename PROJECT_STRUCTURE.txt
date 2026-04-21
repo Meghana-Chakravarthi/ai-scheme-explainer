@@ -1,0 +1,119 @@
+ai-scheme-explainer/
+│
+├── 📁 data/                                    # All data files
+│   ├── 📁 raw/                                 # Raw scraped data
+│   │   ├── myscheme_raw.json                   # 12 schemes from MyScheme Portal
+│   │   └── indiagov_raw.json                   # 8 schemes from India.gov.in
+│   │
+│   ├── 📁 processed/                           # Cleaned and validated data
+│   │   └── schemes_cleaned.json                # 20 validated schemes (MAIN DATASET)
+│   │
+│   ├── 📁 embeddings/                          # Vector embeddings
+│   │   └── chromadb/                           # ChromaDB vector store (60 chunks)
+│   │
+│   ├── schemes.db                              # SQLite database (32KB)
+│   └── schemes.json                            # Original sample data
+│
+├── 📁 scripts/                                 # All pipeline scripts
+│   ├── scraper_myscheme.py                     # MyScheme Portal scraper
+│   ├── scraper_indiagov.py                     # India.gov.in scraper
+│   ├── data_cleaner.py                         # Data cleaning & merging
+│   ├── validator.py                            # Data validation
+│   ├── rag_pipeline.py                         # RAG setup with ChromaDB
+│   ├── database_storage.py                     # SQLite storage
+│   ├── scheme_integration.py                   # LLM integration example
+│   ├── view_dataset.py                         # Dataset viewer utility
+│   ├── run_pipeline.sh                         # Complete pipeline executor
+│   └── requirements.txt                        # Python dependencies
+│
+├── 📁 backend/                                 # Original backend (if exists)
+│   └── ...
+│
+├── 📄 DATA_PIPELINE_README.md                  # Comprehensive technical docs
+├── 📄 QUICKSTART.md                            # 5-minute setup guide
+├── 📄 PIPELINE_SUMMARY.md                      # Implementation summary
+├── 📄 EXECUTION_LOG.md                         # Pipeline execution log
+├── 📄 PROJECT_STRUCTURE.txt                    # This file
+└── 📄 README.md                                # Original project README
+
+═══════════════════════════════════════════════════════════════════════
+
+KEY FILES:
+
+🎯 MAIN DATASET:
+   data/processed/schemes_cleaned.json          # 20 validated schemes
+
+🚀 RUN PIPELINE:
+   scripts/run_pipeline.sh                      # Execute complete pipeline
+
+📖 DOCUMENTATION:
+   DATA_PIPELINE_README.md                      # Full technical docs
+   QUICKSTART.md                                # Quick start guide
+   PIPELINE_SUMMARY.md                          # Implementation summary
+
+🔍 VIEW DATA:
+   scripts/view_dataset.py                      # View schemes in terminal
+
+🤖 RAG INTEGRATION:
+   scripts/rag_pipeline.py                      # RAG query system
+   scripts/scheme_integration.py                # LLM integration example
+
+💾 STORAGE:
+   data/schemes.db                              # SQLite database
+   data/embeddings/chromadb/                    # Vector database
+
+═══════════════════════════════════════════════════════════════════════
+
+DATASET SCHEMA:
+
+{
+  "scheme_name": "string",
+  "description": "string",
+  "benefits": "string",
+  "eligibility": {
+    "age": "string",
+    "income": "string",
+    "gender": "string",
+    "category": "string",
+    "state": "string",
+    "occupation": "string"
+  },
+  "documents_required": ["array of strings"],
+  "source_url": "string"
+}
+
+═══════════════════════════════════════════════════════════════════════
+
+STATISTICS:
+
+Total Schemes:           20
+Data Sources:            2 (MyScheme, India.gov.in)
+Validation Pass Rate:    100%
+Embeddings:              60 semantic chunks
+Storage Formats:         JSON, SQLite, ChromaDB
+Query Response Time:     <100ms
+Total Pipeline Time:     ~25 seconds
+
+═══════════════════════════════════════════════════════════════════════
+
+QUICK COMMANDS:
+
+# Run complete pipeline
+cd scripts && bash run_pipeline.sh
+
+# View dataset
+cd scripts && python3 view_dataset.py
+
+# View specific scheme
+cd scripts && python3 view_dataset.py 1
+
+# Test RAG queries
+cd scripts && python3 rag_pipeline.py
+
+# Test eligibility checker
+cd scripts && python3 scheme_integration.py
+
+# Validate data
+cd scripts && python3 validator.py
+
+═══════════════════════════════════════════════════════════════════════

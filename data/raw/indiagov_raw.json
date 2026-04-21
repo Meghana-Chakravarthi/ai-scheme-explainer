@@ -1,0 +1,156 @@
+[
+  {
+    "scheme_name": "Pradhan Mantri Matru Vandana Yojana",
+    "description": "Maternity benefit scheme providing cash incentive to pregnant and lactating mothers for first live birth.",
+    "benefits": "Cash benefit of ₹5000 in three installments for improved health and nutrition.",
+    "eligibility": {
+      "age": "19-45 years",
+      "income": "All income groups",
+      "gender": "Female",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account",
+      "MCP Card",
+      "Institutional Delivery Proof"
+    ],
+    "source_url": "https://pmmvy.wcd.gov.in"
+  },
+  {
+    "scheme_name": "Atal Pension Yojana",
+    "description": "Pension scheme for unorganized sector workers providing guaranteed pension based on contribution.",
+    "benefits": "Guaranteed pension of ₹1000 to ₹5000 per month after 60 years based on contribution.",
+    "eligibility": {
+      "age": "18-40 years",
+      "income": "All income groups",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account",
+      "Mobile Number"
+    ],
+    "source_url": "https://npscra.nsdl.co.in/atal-pension-yojana.php"
+  },
+  {
+    "scheme_name": "Pradhan Mantri Kaushal Vikas Yojana",
+    "description": "Skill development scheme to enable youth to take up industry-relevant skill training.",
+    "benefits": "Free skill training, certification, and monetary rewards on successful completion.",
+    "eligibility": {
+      "age": "15-45 years",
+      "income": "All income groups",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account",
+      "Educational Certificates"
+    ],
+    "source_url": "https://www.pmkvyofficial.org"
+  },
+  {
+    "scheme_name": "National Rural Employment Guarantee Scheme (MGNREGA)",
+    "description": "Employment guarantee scheme providing at least 100 days of wage employment to rural households.",
+    "benefits": "Guaranteed 100 days of employment per year with minimum wages.",
+    "eligibility": {
+      "age": "18-100 years",
+      "income": "Rural households",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "Worker"
+    },
+    "documents_required": [
+      "Job Card",
+      "Aadhaar Card",
+      "Bank Account"
+    ],
+    "source_url": "https://nrega.nic.in"
+  },
+  {
+    "scheme_name": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+    "description": "Life insurance scheme offering renewable one-year life cover to people aged 18-50 years.",
+    "benefits": "Life cover of ₹2 lakh at premium of ₹436 per year.",
+    "eligibility": {
+      "age": "18-50 years",
+      "income": "All income groups",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account",
+      "Consent Form"
+    ],
+    "source_url": "https://www.jansuraksha.gov.in"
+  },
+  {
+    "scheme_name": "Pradhan Mantri Suraksha Bima Yojana",
+    "description": "Accident insurance scheme offering accidental death and disability cover.",
+    "benefits": "Accidental death cover of ₹2 lakh and disability cover at premium of ₹20 per year.",
+    "eligibility": {
+      "age": "18-70 years",
+      "income": "All income groups",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account",
+      "Consent Form"
+    ],
+    "source_url": "https://www.jansuraksha.gov.in"
+  },
+  {
+    "scheme_name": "Beti Bachao Beti Padhao",
+    "description": "Scheme to address declining Child Sex Ratio and promote education and welfare of girl child.",
+    "benefits": "Awareness campaigns, educational support, and financial incentives for girl child education.",
+    "eligibility": {
+      "age": "0-21 years (girl child)",
+      "income": "All income groups",
+      "gender": "Female",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Birth Certificate",
+      "Aadhaar Card",
+      "School Enrollment Proof"
+    ],
+    "source_url": "https://wcd.nic.in/bbbp-schemes"
+  },
+  {
+    "scheme_name": "Swachh Bharat Mission - Toilet Construction",
+    "description": "Scheme to construct individual household toilets in rural and urban areas.",
+    "benefits": "Financial assistance of ₹12,000 for toilet construction.",
+    "eligibility": {
+      "age": "18-100 years",
+      "income": "BPL and APL households without toilet",
+      "gender": "All",
+      "category": "General",
+      "state": "All India",
+      "occupation": "All"
+    },
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account",
+      "Address Proof",
+      "Photo"
+    ],
+    "source_url": "https://swachhbharatmission.gov.in"
+  }
+]
