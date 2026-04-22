@@ -1,0 +1,122 @@
+[
+  {
+    "name": "PM Kisan Samman Nidhi",
+    "description": "A government scheme that provides income support to farmers.",
+    "eligibility": "Small and marginal farmers owning cultivable land.",
+    "benefits": "₹6000 per year in three installments.",
+    "steps": "Register on PM Kisan official website or through local authorities.",
+    "source": "myscheme.gov.in",
+    "target": "farmer",
+    "max_income": 200000,
+    "min_age": 18,
+    "max_age": 100
+  },
+  {
+    "name": "National Scholarship Portal",
+    "description": "A platform providing scholarships to students from economically weaker sections.",
+    "eligibility": "Students with low family income enrolled in recognized institutions.",
+    "benefits": "Financial support for education including tuition fees.",
+    "steps": "Apply online through the NSP portal.",
+    "source": "scholarships.gov.in",
+    "target": "student",
+    "max_income": 250000,
+    "min_age": 10,
+    "max_age": 30
+  },
+  {
+    "name": "Sukanya Samriddhi Yojana",
+    "description": "A savings scheme for the girl child to support education and marriage expenses.",
+    "eligibility": "Parents or guardians of a girl child below 10 years.",
+    "benefits": "High interest savings with tax benefits.",
+    "steps": "Open account at a bank or post office.",
+    "source": "myscheme.gov.in",
+    "target": "woman",
+    "max_income": 500000,
+    "min_age": 0,
+    "max_age": 10
+  },
+  {
+    "name": "Pradhan Mantri Awas Yojana",
+    "description": "A housing scheme to provide affordable homes to the urban and rural poor.",
+    "eligibility": "Economically weaker sections and low-income groups.",
+    "benefits": "Subsidized home loans and financial assistance.",
+    "steps": "Apply through PMAY official portal.",
+    "source": "myscheme.gov.in",
+    "target": "general",
+    "max_income": 300000,
+    "min_age": 18,
+    "max_age": 100
+  },
+  {
+    "name": "Ayushman Bharat Yojana",
+    "description": "A health insurance scheme providing coverage for medical expenses.",
+    "eligibility": "Low-income families identified under SECC database.",
+    "benefits": "Up to ₹5 lakh health coverage per family per year.",
+    "steps": "Register through hospitals or official portal.",
+    "source": "myscheme.gov.in",
+    "target": "general",
+    "max_income": 300000,
+    "min_age": 0,
+    "max_age": 100
+  },
+  {
+    "name": "PM Ujjwala Yojana",
+    "description": "Provides free LPG connections to women from poor households.",
+    "eligibility": "Women belonging to BPL households.",
+    "benefits": "Free LPG connection and subsidy on cylinders.",
+    "steps": "Apply through nearest LPG distributor.",
+    "source": "myscheme.gov.in",
+    "target": "woman",
+    "max_income": 200000,
+    "min_age": 18,
+    "max_age": 100
+  },
+  {
+    "name": "Stand Up India Scheme",
+    "description": "Supports entrepreneurship among women and SC/ST communities.",
+    "eligibility": "SC/ST and women entrepreneurs.",
+    "benefits": "Bank loans between ₹10 lakh to ₹1 crore.",
+    "steps": "Apply through participating banks.",
+    "source": "myscheme.gov.in",
+    "target": "woman",
+    "max_income": 1000000,
+    "min_age": 18,
+    "max_age": 60
+  },
+  {
+    "name": "e-Shram Portal Scheme",
+    "description": "A scheme to provide social security benefits to unorganized workers.",
+    "eligibility": "Workers in unorganized sector like laborers, construction workers, domestic workers.",
+    "benefits": "Accident insurance and access to welfare schemes.",
+    "steps": "Register on e-Shram portal.",
+    "source": "eshram.gov.in",
+    "target": "worker",
+    "max_income": 300000,
+    "min_age": 18,
+    "max_age": 60
+  },
+  {
+    "name": "PM Shram Yogi Maandhan",
+    "description": "Pension scheme for unorganized sector workers.",
+    "eligibility": "Workers aged 18–40 with monthly income below ₹15000.",
+    "benefits": "₹3000 monthly pension after 60 years.",
+    "steps": "Enroll through CSC centers or online.",
+    "source": "myscheme.gov.in",
+    "target": "worker",
+    "max_income": 180000,
+    "min_age": 18,
+    "max_age": 40
+  },
+  {
+    "name": "AICTE Pragati Scholarship",
+    "description": "Scholarship scheme for girl students pursuing technical education.",
+    "eligibility": "Girl students admitted to AICTE approved institutions.",
+    "benefits": "₹50,000 per year for education expenses.",
+    "steps": "Apply through National Scholarship Portal.",
+    "source": "scholarships.gov.in",
+    "target": "student",
+    "max_income": 250000,
+    "min_age": 15,
+    "max_age": 25
+  }
+]

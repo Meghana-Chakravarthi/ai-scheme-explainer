@@ -1,0 +1,15 @@
+{
+  "name": "ai-scheme-explainer",
+  "version": "1.0.0",
+  "description": "AI-powered government scheme explainer with modern UI",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "api"
+  ],
+  "scripts": {
+    "install:all": "npm install && cd frontend && npm install",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build:frontend": "cd frontend && npm run build"
+  }
+}

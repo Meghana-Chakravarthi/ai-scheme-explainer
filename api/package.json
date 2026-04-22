@@ -1,0 +1,10 @@
+{
+  "name": "ai-scheme-explainer-api",
+  "version": "1.0.0",
+  "description": "Backend API for AI Scheme Explainer",
+  "type": "module",
+  "scripts": {
+    "dev": "node api/explain.js"
+  },
+  "dependencies": {}
+}
