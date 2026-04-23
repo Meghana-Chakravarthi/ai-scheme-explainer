@@ -4,7 +4,6 @@ from pydantic import BaseModel
 from typing import Optional, List
 import json
 import os
-from googletrans import Translator
 
 app = FastAPI()
 
@@ -42,8 +41,6 @@ ABBREVIATIONS = {
     'naps': 'National Apprenticeship Promotion Scheme',
     'pmsvanidhi': 'PM SVANidhi'
 }
-
-translator = Translator()
 
 def normalize_name(name: str) -> str:
     return name.lower().strip().replace('-', '').replace(' ', '')
@@ -97,16 +94,6 @@ def generate_explanation(scheme, simplify=False, language='en'):
         'scheme_name': scheme['scheme_name'],
         'source_url': scheme.get('source_url', '')
     }
-    
-    # Translate if not English
-    if language != 'en':
-        try:
-            result['summary'] = translator.translate(result['summary'], dest=language).text
-            result['eligibility'] = translator.translate(result['eligibility'], dest=language).text
-            result['benefits'] = translator.translate(result['benefits'], dest=language).text
-            result['process'] = translator.translate(result['process'], dest=language).text
-        except:
-            pass  # Fallback to English
     
     return result
 
@@ -174,12 +161,17 @@ def check_eligibility(req: EligibilityRequest):
         
         # Check age
         if elig.get('age'):
-            age_range = elig['age']
-            if '-' in str(age_range):
-                min_age, max_age = map(int, age_range.split('-'))
-                if not (min_age <= req.age <= max_age):
-                    is_eligible = False
-                    reasons.append(f"Age must be {age_range}")
+            age_str = str(elig['age']).lower()
+            if 'all' not in age_str and '-' in age_str:
+                try:
+                    # Remove text like "years", "(girl child)", etc
+                    age_range = age_str.split('(')[0].replace('years', '').replace('year', '').strip()
+                    min_age, max_age = map(int, age_range.split('-'))
+                    if not (min_age <= req.age <= max_age):
+                        is_eligible = False
+                        reasons.append(f"Age must be {elig['age']}")
+                except (ValueError, IndexError):
+                    pass  # Skip if age format is invalid
         
         # Check income
         if elig.get('income') and 'Below' in str(elig['income']):
