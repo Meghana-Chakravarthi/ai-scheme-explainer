@@ -3,7 +3,7 @@ import { FileText, User, Globe } from 'lucide-react'
 import { useLanguage, LANGUAGES } from '../contexts/LanguageContext'
 
 export default function Navbar() {
-  const { language, setLanguage } = useLanguage()
+  const { language, setLanguage, t } = useLanguage()
 
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
@@ -12,13 +12,13 @@ export default function Navbar() {
           <div className="flex items-center space-x-8">
             <Link to="/" className="flex items-center space-x-2">
               <FileText className="w-6 h-6 text-primary" />
-              <span className="text-xl font-semibold text-[#1E293B]">Scheme Explainer</span>
+              <span className="text-xl font-semibold text-[#1E293B]">{t('schemeExplainer')}</span>
             </Link>
             <div className="hidden md:flex space-x-6">
-              <Link to="/" className="text-muted hover:text-[#1E293B] transition-colors">Home</Link>
-              <Link to="/explore" className="text-muted hover:text-[#1E293B] transition-colors">Explore</Link>
-              <Link to="/eligibility" className="text-muted hover:text-[#1E293B] transition-colors">Check Eligibility</Link>
-              <Link to="/compare" className="text-muted hover:text-[#1E293B] transition-colors">Compare</Link>
+              <Link to="/" className="text-muted hover:text-[#1E293B] transition-colors">{t('home')}</Link>
+              <Link to="/explore" className="text-muted hover:text-[#1E293B] transition-colors">{t('explore')}</Link>
+              <Link to="/eligibility" className="text-muted hover:text-[#1E293B] transition-colors">{t('checkEligibility')}</Link>
+              <Link to="/compare" className="text-muted hover:text-[#1E293B] transition-colors">{t('compare')}</Link>
             </div>
           </div>
           <div className="flex items-center space-x-4">

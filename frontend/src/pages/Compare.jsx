@@ -5,6 +5,7 @@ import Button from '../components/Button'
 import Card from '../components/Card'
 import Skeleton from '../components/Skeleton'
 import { getAllSchemes, compareSchemes } from '../services/api'
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function Compare() {
   const [schemes, setSchemes] = useState([])
@@ -12,6 +13,7 @@ export default function Compare() {
   const [scheme2, setScheme2] = useState('')
   const [comparison, setComparison] = useState(null)
   const [loading, setLoading] = useState(false)
+  const { t } = useLanguage()
 
   useEffect(() => {
     loadSchemes()
@@ -43,20 +45,20 @@ export default function Compare() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-[#1E293B] mb-4">Compare Schemes</h1>
-        <p className="text-muted">Compare two government schemes side by side</p>
+        <h1 className="text-4xl font-bold text-[#1E293B] mb-4">{t('compareSchemes')}</h1>
+        <p className="text-muted">{t('compareSideBySide')}</p>
       </div>
 
       <div className="max-w-4xl mx-auto mb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div>
-            <label className="block text-sm font-medium text-[#1E293B] mb-2">First Scheme</label>
+            <label className="block text-sm font-medium text-[#1E293B] mb-2">{t('firstScheme')}</label>
             <select
               value={scheme1}
               onChange={(e) => setScheme1(e.target.value)}
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
             >
-              <option value="">Select a scheme</option>
+              <option value="">{t('selectScheme')}</option>
               {schemes.map((s) => (
                 <option key={s.name} value={s.name}>{s.name}</option>
               ))}
@@ -64,13 +66,13 @@ export default function Compare() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-[#1E293B] mb-2">Second Scheme</label>
+            <label className="block text-sm font-medium text-[#1E293B] mb-2">{t('secondScheme')}</label>
             <select
               value={scheme2}
               onChange={(e) => setScheme2(e.target.value)}
               className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50"
             >
-              <option value="">Select a scheme</option>
+              <option value="">{t('selectScheme')}</option>
               {schemes.map((s) => (
                 <option key={s.name} value={s.name}>{s.name}</option>
               ))}
@@ -80,7 +82,7 @@ export default function Compare() {
         <div className="flex justify-center mt-6">
           <Button onClick={handleCompare} disabled={loading || !scheme1 || !scheme2}>
             <ArrowRight className="w-5 h-5 mr-2" />
-            Compare
+            {t('compare')}
           </Button>
         </div>
       </div>
@@ -106,42 +108,42 @@ export default function Compare() {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-gray-50">
-                  <th className="border border-gray-200 px-4 py-3 text-left font-semibold text-[#1E293B]">Aspect</th>
+                  <th className="border border-gray-200 px-4 py-3 text-left font-semibold text-[#1E293B]">{t('aspect')}</th>
                   <th className="border border-gray-200 px-4 py-3 text-left font-semibold text-[#1E293B]">{comparison.scheme1.name}</th>
                   <th className="border border-gray-200 px-4 py-3 text-left font-semibold text-[#1E293B]">{comparison.scheme2.name}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td className="border border-gray-200 px-4 py-3 font-medium text-[#1E293B]">Description</td>
+                  <td className="border border-gray-200 px-4 py-3 font-medium text-[#1E293B]">{t('description')}</td>
                   <td className="border border-gray-200 px-4 py-3 text-sm">{comparison.scheme1.description}</td>
                   <td className="border border-gray-200 px-4 py-3 text-sm">{comparison.scheme2.description}</td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-3 font-medium text-[#1E293B]">Eligibility</td>
+                  <td className="border border-gray-200 px-4 py-3 font-medium text-[#1E293B]">{t('eligibility')}</td>
                   <td className="border border-gray-200 px-4 py-3 text-sm">{comparison.scheme1.eligibility}</td>
                   <td className="border border-gray-200 px-4 py-3 text-sm">{comparison.scheme2.eligibility}</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-200 px-4 py-3 font-medium text-[#1E293B]">Benefits</td>
+                  <td className="border border-gray-200 px-4 py-3 font-medium text-[#1E293B]">{t('benefits')}</td>
                   <td className="border border-gray-200 px-4 py-3 text-sm">{comparison.scheme1.benefits}</td>
                   <td className="border border-gray-200 px-4 py-3 text-sm">{comparison.scheme2.benefits}</td>
                 </tr>
                 <tr className="bg-gray-50">
-                  <td className="border border-gray-200 px-4 py-3 font-medium text-[#1E293B]">Documents Required</td>
+                  <td className="border border-gray-200 px-4 py-3 font-medium text-[#1E293B]">{t('documentsRequired')}</td>
                   <td className="border border-gray-200 px-4 py-3 text-sm">{comparison.scheme1.documents.join(', ')}</td>
                   <td className="border border-gray-200 px-4 py-3 text-sm">{comparison.scheme2.documents.join(', ')}</td>
                 </tr>
                 <tr>
-                  <td className="border border-gray-200 px-4 py-3 font-medium text-[#1E293B]">Official Website</td>
+                  <td className="border border-gray-200 px-4 py-3 font-medium text-[#1E293B]">{t('officialWebsite')}</td>
                   <td className="border border-gray-200 px-4 py-3 text-sm">
                     <a href={comparison.scheme1.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                      Visit Website
+                      {t('visitWebsite')}
                     </a>
                   </td>
                   <td className="border border-gray-200 px-4 py-3 text-sm">
                     <a href={comparison.scheme2.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                      Visit Website
+                      {t('visitWebsite')}
                     </a>
                   </td>
                 </tr>

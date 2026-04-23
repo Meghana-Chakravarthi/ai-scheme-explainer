@@ -6,6 +6,7 @@ import Button from '../components/Button'
 import Input from '../components/Input'
 import Skeleton from '../components/Skeleton'
 import { checkEligibility } from '../services/api'
+import { useLanguage } from '../contexts/LanguageContext'
 
 const INDIAN_STATES = [
   'Andhra Pradesh', 'Arunachal Pradesh', 'Assam', 'Bihar', 'Chhattisgarh',
@@ -18,6 +19,7 @@ const INDIAN_STATES = [
 
 export default function Eligibility() {
   const navigate = useNavigate()
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     age: '',
     income: '',
@@ -52,37 +54,37 @@ export default function Eligibility() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-[#1E293B] mb-4">Check Your Eligibility</h1>
-        <p className="text-muted">Find out which government schemes you qualify for</p>
+        <h1 className="text-4xl font-bold text-[#1E293B] mb-4">{t('checkYourEligibility')}</h1>
+        <p className="text-muted">{t('findQualifyFor')}</p>
       </div>
 
       <Card className="max-w-2xl mx-auto mb-12">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm font-medium text-[#1E293B] mb-2">Age</label>
+              <label className="block text-sm font-medium text-[#1E293B] mb-2">{t('age')}</label>
               <Input
                 type="number"
                 value={formData.age}
                 onChange={(e) => setFormData({ ...formData, age: e.target.value })}
-                placeholder="Enter your age"
+                placeholder={t('age')}
                 required
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-[#1E293B] mb-2">Annual Income (₹)</label>
+              <label className="block text-sm font-medium text-[#1E293B] mb-2">{t('income')}</label>
               <Input
                 type="number"
                 value={formData.income}
                 onChange={(e) => setFormData({ ...formData, income: e.target.value })}
-                placeholder="Enter annual income"
+                placeholder={t('income')}
                 required
               />
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-[#1E293B] mb-2">Gender</label>
+              <label className="block text-sm font-medium text-[#1E293B] mb-2">{t('gender')}</label>
               <select
                 value={formData.gender}
                 onChange={(e) => setFormData({ ...formData, gender: e.target.value })}
@@ -95,7 +97,7 @@ export default function Eligibility() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-[#1E293B] mb-2">Category</label>
+              <label className="block text-sm font-medium text-[#1E293B] mb-2">{t('category')}</label>
               <select
                 value={formData.category}
                 onChange={(e) => setFormData({ ...formData, category: e.target.value })}
@@ -109,7 +111,7 @@ export default function Eligibility() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-[#1E293B] mb-2">State</label>
+              <label className="block text-sm font-medium text-[#1E293B] mb-2">{t('state')}</label>
               <select
                 value={formData.state}
                 onChange={(e) => setFormData({ ...formData, state: e.target.value })}
@@ -122,7 +124,7 @@ export default function Eligibility() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-[#1E293B] mb-2">Occupation</label>
+              <label className="block text-sm font-medium text-[#1E293B] mb-2">{t('occupation')}</label>
               <select
                 value={formData.occupation}
                 onChange={(e) => setFormData({ ...formData, occupation: e.target.value })}
@@ -139,7 +141,7 @@ export default function Eligibility() {
           </div>
 
           <Button type="submit" className="w-full" disabled={loading}>
-            {loading ? 'Checking...' : 'Check Eligibility'}
+            {loading ? t('checking') : t('checkEligibility')}
           </Button>
         </form>
       </Card>
@@ -161,7 +163,7 @@ export default function Eligibility() {
             <div>
               <h2 className="text-2xl font-bold text-[#1E293B] mb-4 flex items-center">
                 <CheckCircle className="w-6 h-6 text-green-500 mr-2" />
-                Eligible Schemes ({results.total_eligible})
+                {t('eligibleSchemes')} ({results.total_eligible})
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {results.eligible.map((scheme) => (
@@ -176,11 +178,11 @@ export default function Eligibility() {
                     </div>
                     <p className="text-sm text-muted mb-3">{scheme.description}</p>
                     <div className="text-sm text-[#1E293B] mb-2">
-                      <strong>Benefits:</strong> {scheme.benefits}
+                      <strong>{t('benefits')}:</strong> {scheme.benefits}
                     </div>
                     {scheme.documents.length > 0 && (
                       <div className="text-sm text-muted">
-                        <strong>Documents:</strong> {scheme.documents.join(', ')}
+                        <strong>{t('documents')}:</strong> {scheme.documents.join(', ')}
                       </div>
                     )}
                   </Card>
@@ -193,7 +195,7 @@ export default function Eligibility() {
             <div>
               <h2 className="text-2xl font-bold text-[#1E293B] mb-4 flex items-center">
                 <XCircle className="w-6 h-6 text-red-500 mr-2" />
-                Not Eligible ({results.not_eligible.length})
+                {t('notEligible')} ({results.not_eligible.length})
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {results.not_eligible.map((scheme) => (
@@ -205,7 +207,7 @@ export default function Eligibility() {
                     <p className="text-sm text-muted mb-3">{scheme.description}</p>
                     {scheme.reasons.length > 0 && (
                       <div className="text-sm text-red-600">
-                        <strong>Why not eligible:</strong>
+                        <strong>{t('whyNotEligible')}</strong>
                         <ul className="list-disc list-inside mt-1">
                           {scheme.reasons.map((reason, i) => (
                             <li key={i}>{reason}</li>

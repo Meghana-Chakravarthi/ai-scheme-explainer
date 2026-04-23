@@ -5,6 +5,7 @@ import Card from '../components/Card'
 import Input from '../components/Input'
 import Button from '../components/Button'
 import Skeleton from '../components/Skeleton'
+import { useLanguage } from '../contexts/LanguageContext'
 import axios from 'axios'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
@@ -16,6 +17,7 @@ export default function Explore() {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const navigate = useNavigate()
+  const { t } = useLanguage()
 
   const categories = [
     { id: 'all', label: 'All Schemes' },
@@ -66,21 +68,21 @@ export default function Explore() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-[#1E293B] mb-4">Explore Schemes</h1>
-        <p className="text-muted">Browse all available government schemes</p>
+        <h1 className="text-4xl font-bold text-[#1E293B] mb-4">{t('exploreSchemes')}</h1>
+        <p className="text-muted">{t('browseSchemes')}</p>
       </div>
 
       <div className="mb-8">
         <div className="flex gap-3 mb-6">
           <Input
-            placeholder="Search schemes..."
+            placeholder={t('searchSchemes')}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="flex-1"
           />
           <Button onClick={filterSchemes} className="flex items-center space-x-2">
             <Search className="w-5 h-5" />
-            <span>Search</span>
+            <span>{t('search')}</span>
           </Button>
         </div>
 
@@ -115,7 +117,7 @@ export default function Explore() {
       ) : (
         <>
           <div className="mb-4 text-muted">
-            Found {filteredSchemes.length} scheme{filteredSchemes.length !== 1 ? 's' : ''}
+            {t('found')} {filteredSchemes.length} {t('schemes')}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredSchemes.map((scheme) => (
@@ -139,7 +141,7 @@ export default function Explore() {
 
       {!loading && filteredSchemes.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-muted text-lg">No schemes found matching your criteria</p>
+          <p className="text-muted text-lg">{t('noSchemes')}</p>
           <Button
             onClick={() => {
               setSearchQuery('')
@@ -148,7 +150,7 @@ export default function Explore() {
             variant="secondary"
             className="mt-4"
           >
-            Clear Filters
+            {t('clearFilters')}
           </Button>
         </div>
       )}

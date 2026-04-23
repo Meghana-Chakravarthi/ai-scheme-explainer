@@ -5,6 +5,7 @@ import Input from '../components/Input'
 import Button from '../components/Button'
 import Card from '../components/Card'
 import { getAllSchemes } from '../services/api'
+import { useLanguage } from '../contexts/LanguageContext'
 
 export default function Home() {
   const [schemeName, setSchemeName] = useState('')
@@ -12,6 +13,7 @@ export default function Home() {
   const [filteredSchemes, setFilteredSchemes] = useState([])
   const [searchQuery, setSearchQuery] = useState('')
   const navigate = useNavigate()
+  const { t } = useLanguage()
 
   useEffect(() => {
     loadSchemes()
@@ -49,28 +51,28 @@ export default function Home() {
       <div className="text-center mb-16">
         <div className="inline-flex items-center space-x-2 bg-primary/10 px-4 py-2 rounded-full mb-6">
           <Sparkles className="w-4 h-4 text-primary" />
-          <span className="text-sm font-medium text-primary">AI-Powered Multilingual Assistant</span>
+          <span className="text-sm font-medium text-primary">{t('multilingual')}</span>
         </div>
         
         <h1 className="text-5xl md:text-6xl font-bold text-[#1E293B] mb-6 leading-tight">
-          Understand Government<br />Schemes Instantly
+          {t('understandSchemes')}
         </h1>
         
         <p className="text-xl text-muted max-w-2xl mx-auto mb-12">
-          Get clear, simple explanations in your language. Check eligibility. Compare schemes.
+          {t('clearExplanations')}
         </p>
 
         <div className="max-w-2xl mx-auto">
           <div className="flex gap-3">
             <Input
-              placeholder="Enter a scheme name (e.g., PMAY, PM-KISAN)"
+              placeholder={t('enterScheme')}
               value={schemeName}
               onChange={(e) => setSchemeName(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
             />
             <Button onClick={handleSearch} className="flex items-center space-x-2">
               <Search className="w-5 h-5" />
-              <span>Search</span>
+              <span>{t('search')}</span>
             </Button>
           </div>
         </div>
@@ -78,9 +80,9 @@ export default function Home() {
 
       <div className="mb-12">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-2xl font-semibold text-[#1E293B]">All Schemes</h2>
+          <h2 className="text-2xl font-semibold text-[#1E293B]">{t('allSchemes')}</h2>
           <Input
-            placeholder="Search schemes..."
+            placeholder={t('searchSchemes')}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="max-w-xs"
@@ -106,8 +108,8 @@ export default function Home() {
             <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-4">
               <Search className="w-6 h-6 text-primary" />
             </div>
-            <h3 className="text-lg font-semibold text-[#1E293B] mb-2">Instant Search</h3>
-            <p className="text-muted text-sm">Find any government scheme in seconds</p>
+            <h3 className="text-lg font-semibold text-[#1E293B] mb-2">{t('instantSearch')}</h3>
+            <p className="text-muted text-sm">{t('findScheme')}</p>
           </div>
         </Card>
 
@@ -116,8 +118,8 @@ export default function Home() {
             <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mx-auto mb-4">
               <Sparkles className="w-6 h-6 text-accent" />
             </div>
-            <h3 className="text-lg font-semibold text-[#1E293B] mb-2">Multilingual</h3>
-            <p className="text-muted text-sm">Available in 6 Indian languages</p>
+            <h3 className="text-lg font-semibold text-[#1E293B] mb-2">{t('multilingual')}</h3>
+            <p className="text-muted text-sm">{t('availableLanguages')}</p>
           </div>
         </Card>
 
@@ -128,8 +130,8 @@ export default function Home() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
               </svg>
             </div>
-            <h3 className="text-lg font-semibold text-[#1E293B] mb-2">Check Eligibility</h3>
-            <p className="text-muted text-sm">Find schemes you qualify for</p>
+            <h3 className="text-lg font-semibold text-[#1E293B] mb-2">{t('checkEligibility')}</h3>
+            <p className="text-muted text-sm">{t('findQualify')}</p>
           </div>
         </Card>
       </div>
